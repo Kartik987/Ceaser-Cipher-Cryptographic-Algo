@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="myshopcss.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Shopping Cart</title>
+
+
+  </head>
+  <body>
+<img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwitmaGK7PnjAhU2H7cAHTNnCr8QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.flaticon.com%2Ffree-icon%2Fshopping-cart_2772&psig=AOvVaw2N6eceBgA9TFbrJt7fWFUI&ust=1565579411778689" alt="">
+<center>
+    <div class="px-4 px-lg-0">
+      <!-- For demo purpose -->
+      <div class="container text-white py-5 text-center">
+        <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+        <h1 class="display-4">My Shopping cart</h1>
+        <p class="lead mb-0">Build a fully structred shopping cart page using Bootstrap and JS . </p>
+
+      </div>
+    </center>
+    <br>
+
+<marquee behavior="scroll" direction="left"><font color="white">Great Savings. Every Day. Shop from our Deal of the Day, Amazing Deals and avail other great offers</font></marquee>
+
+    <div class="mainbody">
+
+  <!-- starting -->
+
+  <div class="pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
+
+            <!-- Shopping cart table -->
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="p-2 px-3 text-uppercase">Product</div>
+                    </th>
+
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2 text-uppercase">Price </div>
+                    </th>
+                    <th scope="col" class="border-0 bg-light">
+                      <div class="py-2 text-uppercase">Quantity</div>
+
+
+                    </th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="border-0">
+                      <div class="p-2">
+                        <img src="https://images-na.ssl-images-amazon.com/images/I/71gdBQP%2BqGL._UL1500_.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+
+
+                            <input type="button" id="btn1" onclick="addtocart()" value="Add to Cart"></input>
+                        <div class="ml-3 d-inline-block align-middle">
+                          <h5 id="mb-0"> Timex Unisex Originals</h5><span class="text-muted font-weight-normal font-italic d-block">Category: Watches</span>
+
+                        </div>
+                      </div>
+                    </th>
+                    <td class="border-0 align-middle"><strong>Rs</strong><strong id="p1"> 1500.00</strong></td>
+                    <td class="border-0 align-middle"><strong>
+                   <!-- Adding increase and decrease button  -->
+               <button type="button" id="in1" onclick="inc1()" disabled class="btn btn-outline-info">+</button>
+
+                       <form>
+                      <div id="value-button1" id="decrease" onclick="decreaseValue()" value="Decrease Value"></div>
+                      <input type="number" id="number1" value="0" disabled />
+                      <div id="value-button2" id="increase" onclick="increaseValue()" value="Increase Value"></div>
+                      </form>
+
+
+
+
+                    </strong></td>
+                    <td class="border-0 align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a></td>
+                  </tr>
+
+                  <tr>
+                    <th scope="row">
+                      <div class="p-2">
+                        <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-3_cexmhn.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+
+                        <input type="button" id="btn2" onclick="addtocart1()" value="Add to Cart"></input>
+                        <div class="ml-3 d-inline-block align-middle">
+                          <h5 id="mb-1">Lumix camera lense</h5><span class="text-muted font-weight-normal font-italic">Category: Electronics</span>
+                        </div>
+                      </div>
+                    </th>
+                    <td  class="align-middle"><strong>Rs</strong><strong id="p2"> 7000.00</strong></td>
+                    <td class="align-middle"><strong>
+                    <button type="button" id="in2" onclick="inc2()" disabled class="btn btn-outline-info">+</button>
+
+                      <form>
+        <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value"></div>
+        <input type="number" id="number2" value="0" disabled />
+        <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value"></div>
+      </form>
+
+
+
+                    </strong></td>
+                    <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="p-2">
+                        <img src="https://res.cloudinary.com/mhmd/image/upload/v1556670479/product-2_qxjis2.jpg" alt="" width="70" class="img-fluid rounded shadow-sm">
+
+                            <input type="button" id="btn3" onclick="addtocart2()" value="Add to Cart"></input>
+                        <div class="ml-3 d-inline-block align-middle">
+                          <h5 id="mb-2"> Gray Nike running shoe</h5><span class="text-muted font-weight-normal font-italic">Category: Fashion</span>
+                        </div>
+                      </div>
+                      <td class="align-middle"><strong>Rs</strong><strong id="p3"> 2000.00</strong></td>
+
+                      <td class="align-middle"><strong>
+                        <button type="button" id="in3"onclick="inc3()" disabled class="btn btn-outline-info">+</button>
+
+                        <form>
+                          <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value"></div>
+                          <input type="number" id="number3" value="0" disabled />
+                          <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value"></div>
+                        </form>
+
+
+
+
+
+                      </strong></td>
+                      <td class="align-middle"><a href="#" class="text-dark"><i class="fa fa-trash"></i></a>
+                      </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+<!-- Ending -->
+
+
+
+<br>
+<button type="button" onclick="check()" class="btn btn-primary btn-sm">Check your cart value</button>
+
+<button type="button" onclick="check_cart()" class="btn btn-primary btn-sm">Items in your cart</button>
+
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" >
+    var count=0;
+    var bill=0;
+
+var h=0,s=0,y=0,mn1=2,mn2=2,mn3=2;
+function addtocart()
+{
+  if(h==1)
+  {
+     var tu;
+    alert("Item is removed from your cart ");
+  //  document.getElementById("btn1").disabled=true;
+  tu=document.getElementById("number1").value;
+  tu=parseInt(tu,10);
+  tu=0;
+  document.getElementById("number1").value=tu.toString();
+
+
+  btn1.value="Add to Cart";
+  h=0;
+  document.getElementById("in1").disabled=true;
+    return;
+
+  }
+    var x=document.getElementById('mb-0').innerHTML;
+
+    document.getElementById("in1").disabled=false;
+
+    alert(x+" added to your cart");
+
+
+    h=1;
+    document.getElementById("number1").value=1;
+    btn1.value="Remove Item";
+  }
+  function addtocart1(){
+
+    if(s==1)
+    {     var tu1;
+        alert("Item is removed from your cart ");
+      //  document.getElementById("btn1").disabled=true;
+      tu1=document.getElementById("number2").value;
+      tu1=parseInt(tu1,10);
+      tu1=0;
+      document.getElementById("number2").value=tu1.toString();
+
+
+      btn2.value="Add to Cart";
+      s=0;
+      document.getElementById("in2").disabled=true;
+      return;
+    }
+  var x=document.getElementById('mb-1').innerHTML;
+document.getElementById("in2").disabled=false;
+  alert(x+" added to your cart ");
+
+  s=1;
+  document.getElementById("number2").value=1;
+  btn2.value="Remove Item";
+
+  }
+  function addtocart2(){
+    if(y==1)
+    {
+      var tu2;
+         alert("Item is removed from your cart ");
+       //  document.getElementById("btn1").disabled=true;
+       tu2=document.getElementById("number3").value;
+       tu2=parseInt(tu2,10);
+       tu2=0;
+       document.getElementById("number3").value=tu2.toString();
+
+
+       btn3.value="Add to Cart";
+       y=0;
+       document.getElementById("in3").disabled=true;
+      return;
+
+    }
+  var x=document.getElementById('mb-2').innerHTML;
+  document.getElementById("in3").disabled=false;
+  alert(x+" added to your cart ");
+
+  y=1;
+    document.getElementById("number3").value=1;
+    btn3.value="Remove Item";
+
+  }
+  function check(){
+
+var e=document.getElementById("number1").value;
+var w=document.getElementById("p1").innerHTML;
+
+
+var q=document.getElementById("number2").value;
+var r=document.getElementById("p2").innerHTML;
+
+
+var t=document.getElementById("number3").value;
+var y=document.getElementById("p3").innerHTML;
+
+bill=e*w+q*r+t*y;
+alert("Total amount to be paid: "+"Rs "+bill);
+
+
+  }
+
+
+function inc1()
+{
+
+  document.getElementById("number1").value=mn1;
+  mn1++;
+
+}
+function inc2()
+{
+
+  document.getElementById("number2").value=mn2;
+  mn2++;
+
+}
+function inc3()
+{
+
+  document.getElementById("number3").value=mn3;
+  mn3++;
+
+}
+
+function check_cart(){
+var v1=0,v2=0,v3=0,vres;
+
+v1=document.getElementById("number1").value;
+v2=document.getElementById("number2").value;
+v3=document.getElementById("number3").value;
+
+vres=parseInt(v1,10)+parseInt(v2,10)+parseInt(v3,10)  // id=number1,number2,number3 return char value so we have to convert this
+                                                       // char value to number
+
+alert(vres);
+
+}
+
+
+    </script>
+
+  </body>
+</html>
